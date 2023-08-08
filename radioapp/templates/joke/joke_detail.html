@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Joke Detail{% endblock %}
+
+{% block content %}
+<h1>Joke Detail</h1>
+<p>Question: {{ joke.question }}</p>
+<p>Answer: {{ joke.answer }}</p>
+<a href="{% url 'joke-update' joke.pk %}">Edit</a>
+<a href="{% url 'joke-delete' joke.pk %}">Delete</a>
+{% endblock %}

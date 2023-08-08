@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Topic List</h1>
+  <h3>debugging template</h3>
+  <ul>
+    {% for topic in topics %}
+      <li><a href="{% url 'topic-detail' topic.pk %}">{{ topic.keyword }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'topic-create' %}">Create New Topic</a>
+{% endblock %}
